@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    android:layout_marginBottom="4dp"
+    android:elevation="8dp">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="8dp">
+
+        <ImageView
+            android:id="@+id/store_image"
+            android:layout_width="80dp"
+            android:scaleType="fitXY"
+            android:background="@drawable/edit_text_bg"
+            android:layout_height="80dp"
+            android:layout_margin="8dp" />
+
+        <ImageView
+            android:id="@+id/store_location"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_below="@id/store_name_display"
+            android:layout_alignParentEnd="true"
+            android:layout_margin="8dp"
+            android:src="@drawable/ic_baseline_directions_24" />
+
+        <TextView
+            android:id="@+id/store_address_display"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/store_name_display"
+            android:layout_alignStart="@id/store_name_display"
+            android:layout_toRightOf="@+id/store_image"
+            android:layout_toLeftOf="@id/store_location"
+            android:ellipsize="end"
+            android:textColor="@color/black_3"
+            android:maxLines="2"
+            android:textSize="14sp"
+            tools:text="Haldwani, 263139" />
+
+        <TextView
+            android:id="@+id/store_name_display"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@id/store_image"
+            android:layout_marginStart="8dp"
+            android:layout_toRightOf="@+id/store_image"
+            android:ellipsize="end"
+            android:maxLines="2"
+            android:textColor="@color/black"
+            android:textSize="18sp"
+            tools:text="Mama Earth Shampoo 200 ML" />
+
+        <TextView
+            android:id="@+id/store_extra_display"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/store_address_display"
+            android:layout_toLeftOf="@id/store_location"
+            android:layout_alignStart="@id/store_name_display"
+            android:layout_marginTop="10dp"
+            android:layout_toRightOf="@+id/store_image"
+            android:ellipsize="end"
+            android:textColor="@color/colorSecondary"
+            android:maxLines="2"
+            android:textStyle="italic"
+            android:textSize="16sp"
+            tools:text="Exclusive Buy 1 Get 1 free sale" />
+
+    </RelativeLayout>
+</androidx.cardview.widget.CardView>

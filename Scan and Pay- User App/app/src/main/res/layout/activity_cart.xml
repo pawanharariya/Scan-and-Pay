@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".fragments.CartFragment">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/cart_summary_view"
+            android:elevation="12dp"
+            android:background="@color/black_3"
+            android:layout_alignParentBottom="true"
+            android:padding="16dp">
+
+            <Button
+                android:id="@+id/purchase_button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:backgroundTint="@color/colorPrimary"
+                android:text="Buy Now" />
+
+            <TextView
+                android:id="@+id/total_quantity_label"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/total_cost_label"
+                android:text="Total Items  "
+                android:layout_alignBottom="@id/total_quantity_display"
+                android:layout_alignTop="@id/total_quantity_display"
+                android:textColor="@color/white"
+                android:textSize="16sp" />
+
+            <TextView
+                android:id="@+id/total_cost_display"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@+id/total_cost_label"
+                android:textColor="@color/white"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                tools:text="500" />
+
+            <TextView
+                android:id="@+id/total_quantity_display"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/total_cost_display"
+                android:layout_alignLeft="@id/total_cost_display"
+                android:layout_toRightOf="@+id/total_quantity_label"
+                android:textColor="@color/white"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                tools:text="5" />
+
+            <TextView
+                android:id="@+id/total_cost_label"
+                android:layout_width="wrap_content"
+                android:layout_alignTop="@id/total_cost_display"
+                android:layout_alignBottom="@id/total_cost_display"
+                android:layout_height="wrap_content"
+                android:layout_alignStart="@id/total_quantity_label"
+                android:layout_alignEnd="@id/total_quantity_label"
+                android:text="Total Cost    "
+                android:textColor="@color/white"
+                android:textSize="16sp" />
+        </RelativeLayout>
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/cart_items_recycler"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/cart_summary_view"
+        android:layout_alignParentTop="true"
+        android:clipToPadding="false"
+        android:paddingBottom="122dp"
+        tools:listitem="@layout/list_item_cart" />
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/scan_product"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/cart_summary_view"
+        android:layout_alignParentEnd="true"
+        android:layout_margin="32dp"
+        android:backgroundTint="@color/colorSecondary"
+        android:src="@drawable/scan_product"
+        app:borderWidth="0dp"
+        app:fabSize="normal" />
+
+    <include
+        android:id="@+id/empty_cart_layout"
+        layout="@layout/layout_empty_cart"
+        android:visibility="invisible" />
+
+    <include
+        android:id="@+id/success_qr_layout"
+        layout="@layout/layout_qr_display"
+        android:visibility="invisible" />
+
+    <include
+        android:id="@+id/loading_layout"
+        layout="@layout/layout_loading"
+        android:visibility="gone" />
+</RelativeLayout>

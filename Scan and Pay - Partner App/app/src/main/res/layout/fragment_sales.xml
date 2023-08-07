@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg_white"
+    android:clickable="true"
+    android:focusable="true"
+    tools:context=".fragments.SalesFragment">
+
+    <Button
+        android:id="@+id/date_display"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="48dp"
+        android:backgroundTint="@color/white"
+        android:padding="12dp"
+        android:text="Select Date"
+        android:visibility="invisible"
+        android:textAllCaps="false"
+        android:textColor="@color/colorPrimaryDark"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/total_quantity" />
+
+    <Spinner
+        android:id="@+id/sales_category_spinner"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="48dp"
+        android:layout_marginTop="48dp"
+        android:layout_marginEnd="48dp"
+        android:background="@drawable/spinner_bg"
+        android:entries="@array/sales_spinner_list"
+        android:paddingStart="16dp"
+        android:paddingTop="8dp"
+        android:paddingBottom="8dp"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="RtlSymmetry" />
+
+    <TextView
+        android:id="@+id/total_sales"
+        style="@style/SalesTextViews"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="48dp"
+        android:minWidth="120dp"
+        android:minHeight="120dp"
+        app:layout_constraintEnd_toStartOf="@id/total_orders"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/sales_category_spinner"
+        tools:text="\u20b9 30000" />
+
+    <TextView
+        android:id="@+id/total_orders"
+        style="@style/SalesTextViews"
+        android:layout_marginTop="48dp"
+        android:layout_marginEnd="16dp"
+        android:minWidth="120dp"
+        android:minHeight="120dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/total_sales"
+        app:layout_constraintTop_toBottomOf="@id/sales_category_spinner"
+        tools:text="34" />
+
+    <TextView
+        android:id="@+id/total_quantity"
+        style="@style/SalesTextViews"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="48dp"
+        android:minWidth="120dp"
+        android:minHeight="120dp"
+        app:layout_constraintEnd_toStartOf="@id/average_sales"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/total_sales"
+        tools:text="200" />
+
+    <TextView
+        android:id="@+id/average_sales"
+        style="@style/SalesTextViews"
+        android:layout_marginTop="48dp"
+        android:layout_marginEnd="16dp"
+        android:minWidth="120dp"
+        android:minHeight="120dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/total_quantity"
+        app:layout_constraintTop_toBottomOf="@id/total_orders"
+        tools:text="\u20b9 34" />
+
+    <TextView
+        android:id="@+id/total_orders_label"
+        style="@style/ProfileLabelStyle"
+        android:layout_marginStart="0dp"
+        android:text="Total Orders"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toTopOf="@id/total_orders"
+        app:layout_constraintEnd_toEndOf="@id/total_orders"
+        app:layout_constraintStart_toStartOf="@+id/total_orders" />
+
+    <TextView
+        android:id="@+id/total_sales_label"
+        style="@style/ProfileLabelStyle"
+        android:layout_marginStart="0dp"
+        android:text="Total Sales"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toTopOf="@id/total_sales"
+        app:layout_constraintEnd_toEndOf="@id/total_sales"
+        app:layout_constraintStart_toStartOf="@+id/total_sales" />
+
+    <TextView
+        android:id="@+id/total_quantity_label"
+        style="@style/ProfileLabelStyle"
+        android:layout_marginStart="0dp"
+        android:text="Items Sold"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toTopOf="@id/total_quantity"
+        app:layout_constraintEnd_toEndOf="@id/total_quantity"
+        app:layout_constraintStart_toStartOf="@+id/total_quantity" />
+
+    <TextView
+        android:id="@+id/average_sales_label"
+        style="@style/ProfileLabelStyle"
+        android:layout_marginStart="0dp"
+        android:text="Average Sale/day"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toTopOf="@id/average_sales"
+        app:layout_constraintEnd_toEndOf="@id/average_sales"
+        app:layout_constraintStart_toStartOf="@+id/average_sales" />
+
+    <TextView
+        android:id="@+id/date_display_label"
+        style="@style/ProfileLabelStyle"
+        android:layout_marginStart="0dp"
+        android:text="Select a date"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toTopOf="@id/date_display"
+        app:layout_constraintEnd_toEndOf="@id/date_display"
+        app:layout_constraintStart_toStartOf="@+id/date_display" />
+
+    <include
+        android:id="@+id/loading_layout"
+        layout="@layout/layout_loading"
+        android:visibility="invisible" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

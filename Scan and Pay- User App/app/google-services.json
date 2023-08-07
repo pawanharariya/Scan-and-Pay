@@ -1,0 +1,68 @@
+{
+  "project_info": {
+    "project_number": "744992848195",
+    "project_id": "noqueue-pay",
+    "storage_bucket": "noqueue-pay.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:744992848195:android:11a2b81a80468c547d97f6",
+        "android_client_info": {
+          "package_name": "com.anvay.noqueuepay"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "744992848195-laeuqcjhs1lnsl44sjcig6f6gi89rc55.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAzps_MJraVIeGCU0Qh3u1m8MUnjy-qpRI"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "744992848195-laeuqcjhs1lnsl44sjcig6f6gi89rc55.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:744992848195:android:3474efa2782dce487d97f6",
+        "android_client_info": {
+          "package_name": "com.anvay.noqueuepaydashboard"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "744992848195-laeuqcjhs1lnsl44sjcig6f6gi89rc55.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAzps_MJraVIeGCU0Qh3u1m8MUnjy-qpRI"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "744992848195-laeuqcjhs1lnsl44sjcig6f6gi89rc55.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

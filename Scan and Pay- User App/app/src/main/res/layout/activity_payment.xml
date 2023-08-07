@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp"
+    tools:context=".PaymentActivity">
+
+    <Button
+        android:id="@+id/proceed_to_pay"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:layout_below="@id/date_label"
+        style="@style/FullWidthRoundButton"
+        android:text="Proceed to Checkout" />
+
+    <TextView
+        android:id="@+id/store_name_label"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@id/store_name_display"
+        android:text="Store Name"
+        android:textColor="@color/black"
+        android:textSize="16sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/order_id_label"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/store_name_label"
+        android:layout_alignTop="@id/order_id_display"
+        android:text="Order Id"
+        android:textColor="@color/black"
+        android:textSize="16sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/total_quantity_label"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/order_id_label"
+        android:layout_alignTop="@id/total_quantity_display"
+        android:text="Total Quantity"
+        android:textColor="@color/black"
+        android:textSize="16sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/total_cost_label"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/total_quantity_label"
+        android:layout_alignTop="@id/total_cost_display"
+        android:text="Total Cost"
+        android:textColor="@color/black"
+        android:textSize="16sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/date_label"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/total_cost_label"
+        android:layout_alignTop="@id/date_display"
+        android:text="Date"
+        android:textColor="@color/black"
+        android:textSize="16sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/order_id_display"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/store_name_display"
+        android:layout_alignStart="@id/store_name_display"
+        android:layout_marginTop="16dp"
+        android:layout_toEndOf="@id/order_id_label"
+        android:textColor="@color/black"
+        android:textSize="16sp"
+        tools:text="Order Id: 112338" />
+
+    <TextView
+        android:id="@+id/date_display"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/total_cost_display"
+        android:layout_alignStart="@id/store_name_display"
+        android:layout_marginTop="16dp"
+        android:textColor="@color/black"
+        android:textSize="16sp"
+        tools:text="12 Aug 2021" />
+
+    <TextView
+        android:id="@+id/total_quantity_display"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/order_id_display"
+        android:layout_alignStart="@id/store_name_display"
+        android:layout_marginTop="16dp"
+        android:textColor="@color/black"
+        android:textSize="16sp"
+        tools:text="Total Quantity: 12 items" />
+
+    <TextView
+        android:id="@+id/total_cost_display"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/total_quantity_display"
+        android:layout_alignStart="@id/store_name_display"
+        android:layout_marginTop="16dp"
+        android:layout_toEndOf="@id/total_cost_label"
+        android:textColor="@color/black"
+        android:textSize="16sp"
+        tools:text="Total Price: 200" />
+
+    <TextView
+        android:id="@+id/store_name_display"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_toEndOf="@id/store_name_label"
+        android:textColor="@color/black"
+        android:textSize="16sp"
+        tools:text="Easy Day Mart, HaldwaniEasy Day Mart, HaldwaniEasy Day Mart, HaldwaniEasy Day Mart, Haldwani" />
+
+    <include
+        android:id="@+id/loading_layout"
+        layout="@layout/layout_loading"
+        android:visibility="invisible" />
+</RelativeLayout>

@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg_white"
+    android:clickable="true"
+    android:elevation="122dp">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/bg_white"
+        android:clickable="true"
+        android:focusable="true">
+
+        <Button
+            android:id="@+id/finish_button"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/summary_card"
+            android:layout_centerHorizontal="true"
+            android:text="Finish"
+            android:textAllCaps="false"
+            android:visibility="invisible" />
+
+        <ImageView
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_alignTop="@id/success_text"
+            android:layout_alignParentEnd="true"
+            android:layout_marginEnd="16dp"
+            android:elevation="1dp"
+            android:src="@drawable/ic_baseline_check_circle_24" />
+
+        <TextView
+            android:id="@+id/paid_amount_label"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_above="@id/summary_card"
+            android:layout_marginStart="16dp"
+            android:layout_marginBottom="48dp"
+            android:elevation="1dp"
+            android:textColor="@color/white"
+            android:textSize="28sp"
+            tools:text="INR 300" />
+
+        <TextView
+            android:id="@+id/success_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_above="@id/paid_amount_label"
+            android:layout_marginStart="16dp"
+            android:elevation="1dp"
+            android:text="Bill Payment Successful"
+            android:textColor="@color/white"
+            android:textSize="21sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/finish_shop_info"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/finish_button"
+            android:layout_marginBottom="16dp"
+            android:gravity="center"
+            android:text="@string/finish_shop_info"
+            android:visibility="invisible" />
+
+        <View
+            android:id="@+id/title_bg"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:background="#64DD17" />
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/summary_card"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@id/title_bg"
+            android:layout_marginLeft="32dp"
+            android:layout_marginTop="-32dp"
+            android:layout_marginRight="32dp"
+            android:layout_marginBottom="16dp"
+            app:cardCornerRadius="16dp"
+            app:cardPreventCornerOverlap="true">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:padding="16dp">
+
+                <ImageView
+                    android:id="@+id/success_qr_display"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/reference_number_label"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="16dp"
+                    android:layout_marginBottom="16dp" />
+
+                <TextView
+                    android:id="@+id/order_id_label"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/store_name_label"
+                    android:textColor="@color/black"
+                    android:textSize="16sp"
+                    android:textStyle="bold"
+                    tools:text="Order Id: O1133AT" />
+
+                <TextView
+                    android:id="@+id/info_label"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/order_id_label"
+                    android:layout_marginTop="12dp"
+                    tools:text="Your bill payment of amount INR 2920 with Vishal Mega Mart has been successfully processed." />
+
+                <TextView
+                    android:id="@+id/reference_number_label"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/info_label"
+                    android:textColor="@color/black"
+                    android:textSize="16sp"
+                    android:layout_marginTop="8dp"
+                    android:textStyle="bold"
+                    tools:text="Reference No: 11993038203803" />
+
+                <TextView
+                    android:id="@+id/store_name_label"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textSize="18sp"
+                    android:textColor="@color/black"
+                    tools:text="Vishal Mega Mart,PolySheet, Haldwani" />
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/viewInvoice"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/success_qr_display"
+                    android:layout_centerHorizontal="true"
+                    android:backgroundTint="@color/bg_white"
+                    android:paddingStart="32dp"
+                    android:paddingEnd="32dp"
+                    app:iconGravity="start"
+                    app:iconPadding="18dp"
+                    android:text="Invoice"
+                    app:icon="@drawable/ic_download"
+                    app:iconTint="@color/colorPrimaryDark"
+                    android:textAllCaps="false"
+                    android:textColor="@color/colorPrimaryDark" />
+            </RelativeLayout>
+        </androidx.cardview.widget.CardView>
+    </RelativeLayout>
+</ScrollView>

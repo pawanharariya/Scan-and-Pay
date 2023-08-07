@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg_white"
+    android:clickable="true"
+    android:focusable="true"
+    android:orientation="vertical">
+
+    <Button
+        android:id="@+id/edit_profile"
+        style="@style/FullWidthRoundButton"
+        android:layout_below="@id/zipcode"
+        android:layout_marginTop="32dp"
+        android:text="Edit Profile" />
+
+    <Button
+        android:id="@+id/update_profile"
+        style="@style/FullWidthRoundButton"
+        android:layout_below="@id/zipcode"
+        android:elevation="1dp"
+        android:layout_marginTop="32dp"
+        android:text="Update Profile"
+        android:visibility="invisible" />
+
+    <EditText
+        android:id="@+id/name"
+        style="@style/EditTextStyle"
+        android:layout_below="@id/name_label"
+        android:enabled="false"
+        android:maxLines="1" />
+
+    <EditText
+        android:id="@+id/mobile_number"
+        style="@style/EditTextStyle"
+        android:layout_below="@id/mobile_number_label"
+        android:enabled="false"
+        android:maxLines="1" />
+
+
+    <EditText
+        android:id="@+id/city"
+        style="@style/EditTextStyle"
+        android:layout_below="@id/city_label"
+        android:enabled="false"
+        android:maxLines="1" />
+
+    <EditText
+        android:id="@+id/zipcode"
+        style="@style/EditTextStyle"
+        android:layout_below="@id/zipcode_label"
+        android:enabled="false"
+        android:inputType="number"
+        android:maxLines="1" />
+
+
+    <EditText
+        android:id="@+id/email"
+        style="@style/EditTextStyle"
+        android:layout_below="@id/email_label"
+        android:enabled="false"
+        android:inputType="textEmailAddress"
+        android:maxLines="1" />
+
+    <TextView
+        android:id="@+id/name_label"
+        style="@style/ProfileLabelStyle"
+        android:layout_marginTop="48dp"
+        android:text="Name" />
+
+    <TextView
+        android:id="@+id/mobile_number_label"
+        style="@style/ProfileLabelStyle"
+        android:layout_below="@+id/name"
+        android:text="Mobile Number" />
+
+    <TextView
+        android:id="@+id/email_label"
+        style="@style/ProfileLabelStyle"
+        android:layout_below="@+id/mobile_number"
+        android:text="Email" />
+
+    <TextView
+        android:id="@+id/city_label"
+        style="@style/ProfileLabelStyle"
+        android:layout_below="@id/email"
+        android:text="City" />
+
+    <TextView
+        android:id="@+id/zipcode_label"
+        style="@style/ProfileLabelStyle"
+        android:layout_below="@id/city"
+        android:text="Pincode" />
+
+    <include
+        android:id="@+id/loading_layout"
+        layout="@layout/layout_loading"
+        android:visibility="invisible" />
+</RelativeLayout>
+
+
+

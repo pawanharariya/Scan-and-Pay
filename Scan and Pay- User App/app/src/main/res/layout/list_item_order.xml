@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="4dp"
+    android:background="@color/white"
+    android:elevation="8dp">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="16dp">
+
+        <TextView
+            android:id="@+id/store_name_display"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_toLeftOf="@id/order_price_display"
+            android:ellipsize="end"
+            android:maxLines="2"
+            android:textColor="@color/black_2"
+            android:textSize="18sp"
+            tools:text="Mama Earth Shampoo 200 ML" />
+
+        <TextView
+            android:id="@+id/order_id_display"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/store_name_display"
+            android:layout_alignStart="@id/store_name_display"
+            android:maxLines="1"
+            android:textColor="@color/black_3"
+            android:textSize="16sp"
+            tools:text="ST11240" />
+
+        <TextView
+            android:id="@+id/order_timestamp_display"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/order_id_display"
+            android:maxLines="1"
+            android:textSize="16sp"
+            tools:text="12 Aug 2021 7:30 PM" />
+
+        <TextView
+            android:id="@+id/order_price_display"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="12dp"
+            android:textColor="#33691E"
+            android:textSize="20sp"
+            tools:text="INR 240" />
+    </RelativeLayout>
+</androidx.cardview.widget.CardView>

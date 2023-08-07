@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingTop="48dp"
+    android:background="@color/bg_white"
+    android:orientation="vertical">
+
+    <Button
+        android:id="@+id/create_profile"
+        style="@style/FullWidthRoundButton"
+        android:layout_marginTop="32dp"
+        android:layout_below="@id/zipcode"
+        android:text="Create Profile" />
+
+    <EditText
+        android:id="@+id/name"
+        style="@style/EditTextStyle"
+        android:layout_below="@id/name_label"
+        android:maxLines="1" />
+
+    <EditText
+        android:id="@+id/mobile_number"
+        style="@style/EditTextStyle"
+        android:layout_below="@id/mobile_number_label"
+        android:enabled="false"
+        android:maxLines="1" />
+
+    <EditText
+        android:id="@+id/email"
+        style="@style/EditTextStyle"
+        android:layout_below="@id/email_label"
+        android:inputType="textEmailAddress"
+        android:maxLines="1" />
+
+    <EditText
+        android:id="@+id/city"
+        style="@style/EditTextStyle"
+        android:layout_below="@id/city_label"
+        android:maxLines="1" />
+
+    <EditText
+        android:id="@+id/zipcode"
+        style="@style/EditTextStyle"
+        android:layout_below="@id/zipcode_label"
+        android:inputType="number"
+        android:maxLines="1" />
+
+
+    <TextView
+        android:id="@+id/name_label"
+        style="@style/ProfileLabelStyle"
+        android:text="Name" />
+
+    <TextView
+        android:id="@+id/mobile_number_label"
+        style="@style/ProfileLabelStyle"
+        android:layout_below="@+id/name"
+        android:text="Mobile Number" />
+
+    <TextView
+        android:id="@+id/email_label"
+        style="@style/ProfileLabelStyle"
+        android:layout_below="@+id/mobile_number"
+        android:text="Email" />
+
+    <TextView
+        android:id="@+id/city_label"
+        style="@style/ProfileLabelStyle"
+        android:layout_below="@id/email"
+        android:text="City" />
+
+    <TextView
+        android:id="@+id/zipcode_label"
+        style="@style/ProfileLabelStyle"
+        android:layout_below="@id/city"
+        android:text="Pincode" />
+
+    <include
+        android:id="@+id/loading_layout"
+        layout="@layout/layout_loading"
+        android:visibility="invisible" />
+</RelativeLayout>

@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">@color/orange_500</color>
+    <color name="colorPrimaryDark">@color/orange_700</color>
+    <color name="colorSecondary">@color/magenta</color>
+    <color name="orange_200">#FFCC80</color>
+    <color name="orange_500">#FA5118</color>
+    <color name="orange_700">#EC2D0A</color>
+    <color name="bg_white">#F6F6F9</color>
+    <color name="magenta">#e9104f</color>
+    <color name="black">#FF000000</color>
+    <color name="black_2">#000d49</color>
+    <color name="black_3">#37474F</color>
+    <color name="white">#FFFFFFFF</color>
+    <color name="edit_text_disabled">#455A64</color>
+    <color name="text_label">#9E9E9E</color>
+    <color name="loading_screen_bg">#55FFCC80</color>
+    <color name="recycler_bg">@color/orange_200</color>
+    <color name="cart_option_delete">#757575</color>
+    <color name="cart_quantity_options">#EEEEEE</color>
+</resources>

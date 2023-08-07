@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg_white"
+    android:clickable="true"
+    tools:context=".fragments.HomeFragment"
+    android:focusable="true">
+
+    <TextView
+        android:id="@+id/title"
+        android:background="@android:color/white"
+        android:text="ORDER HISTORY"
+        android:textColor="@color/colorPrimaryDark"
+        android:elevation="12dp"
+        android:padding="8dp"
+        android:letterSpacing="0.1"
+        android:includeFontPadding="false"
+        android:textSize="18sp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <TextView
+        android:id="@+id/empty_recycler_info"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:visibility="invisible"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:text="No order history"
+        android:layout_centerInParent="true"
+        android:textSize="16sp"
+        android:textAlignment="center" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/orders_history_recycler"
+        android:layout_width="match_parent"
+        android:layout_below="@id/title"
+        tools:listitem="@layout/list_item_order_history"
+        android:layout_height="match_parent" />
+
+    <include
+        android:id="@+id/loading_layout"
+        layout="@layout/layout_loading"
+        android:visibility="invisible" />
+</RelativeLayout>

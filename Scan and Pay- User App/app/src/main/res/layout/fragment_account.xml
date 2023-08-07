@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg_white"
+    android:clipToPadding="false"
+    tools:context=".fragments.AccountFragment">
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        android:layout_below="@id/tac_button"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="24dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:paddingStart="16dp"
+                android:paddingEnd="16dp"
+                android:text="App Version"
+                android:textAllCaps="false"
+                android:textColor="@color/colorSecondary"
+                android:textSize="18sp"
+                app:backgroundTint="@color/white" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingStart="18dp"
+                android:text="@string/app_version"
+                android:textColor="@color/colorPrimary"
+                android:textSize="16sp" />
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+
+    <androidx.fragment.app.FragmentContainerView
+        android:id="@+id/account_fragment_host"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_margin="-16dp"
+        android:elevation="12dp" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/customer_care_button"
+        style="@style/FragmentOptionButton"
+        android:layout_below="@id/purchase_history_button"
+        android:text="Customer Care" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/tac_button"
+        style="@style/FragmentOptionButton"
+        android:layout_below="@id/customer_care_button"
+        android:text="Terms and Conditions" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/purchase_history_button"
+        style="@style/FragmentOptionButton"
+        android:layout_below="@+id/profile_button"
+        android:text="Purchase History" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/profile_button"
+        android:layout_marginTop="32dp"
+        style="@style/FragmentOptionButton"
+        android:text="Profile" />
+
+</RelativeLayout>

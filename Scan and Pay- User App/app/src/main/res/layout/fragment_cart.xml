@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:background="@color/bg_white"
+    android:layout_height="match_parent">
+
+    <Button
+        android:id="@+id/scan_shop_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:layout_below="@id/empty_cart_label"
+        android:text="Scan Shop's QR Code"
+        android:textAllCaps="false" />
+
+    <TextView
+        android:id="@+id/empty_cart_label"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:layout_marginTop="200dp"
+        android:padding="48dp"
+        android:text="@string/message_cart_not_ready" />
+
+    <include
+        android:id="@+id/loading_layout"
+        android:visibility="invisible"
+        layout="@layout/layout_loading" />
+
+</RelativeLayout>
