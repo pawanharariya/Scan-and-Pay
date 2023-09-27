@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    package="com.anvay.noqueuepay">
+    package="com.psh.scanpay">
 
     <application
         android:allowBackup="true"
@@ -12,11 +12,11 @@
         android:theme="@style/Theme.NoQueuePay"
         tools:ignore="ExtraText">
         <activity
-            android:name=".ProfileActivity"
+            android:name="com.psh.scanpay.ProfileActivity"
             android:screenOrientation="sensorPortrait"
             android:windowSoftInputMode="adjustResize" />
         <activity
-            android:name=".LoginActivity"
+            android:name="com.psh.scanpay.LoginActivity"
             android:screenOrientation="sensorPortrait" />
         <!--
              The API key for Google Maps-based APIs is defined as a string resource.
@@ -27,16 +27,16 @@
              You can define the keys for the debug and release targets in src/debug/ and src/release/.
         -->
         <activity
-            android:name=".PaymentActivity"
+            android:name="com.psh.scanpay.PaymentActivity"
             android:screenOrientation="sensorPortrait" />
         <activity
-            android:name=".CartActivity"
+            android:name="com.psh.scanpay.CartActivity"
             android:screenOrientation="sensorPortrait" />
         <activity
-            android:name=".ScanningActivity"
+            android:name="com.psh.scanpay.ScanningActivity"
             android:screenOrientation="sensorPortrait" />
         <activity
-            android:name=".MainActivity"
+            android:name="com.psh.scanpay.MainActivity"
             android:label="@string/app_name"
             android:screenOrientation="sensorPortrait"
             android:windowSoftInputMode="adjustPan">

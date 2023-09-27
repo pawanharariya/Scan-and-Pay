@@ -7,25 +7,25 @@
 
     <fragment
         android:id="@+id/navigation_home"
-        android:name="com.anvay.noqueuepay.fragments.HomeFragment"
+        android:name="com.psh.scanpay.fragments.HomeFragment"
         android:label="@string/title_home"
         tools:layout="@layout/fragment_home" />
 
     <fragment
         android:id="@+id/navigation_store"
-        android:name="com.anvay.noqueuepay.fragments.SearchStoreFragment"
+        android:name="com.psh.scanpay.fragments.SearchStoreFragment"
         android:label="@string/title_store"
         tools:layout="@layout/fragment_search_store" />
 
     <fragment
         android:id="@+id/navigation_cart"
-        android:name="com.anvay.noqueuepay.fragments.CartFragment"
+        android:name="com.psh.scanpay.fragments.CartFragment"
         android:label="@string/title_cart"
         tools:layout="@layout/fragment_cart" />
 
     <fragment
         android:id="@+id/navigation_account"
-        android:name="com.anvay.noqueuepay.fragments.AccountFragment"
+        android:name="com.psh.scanpay.fragments.AccountFragment"
         android:label="@string/title_account"
         tools:layout="@layout/fragment_account" />
 </navigation>

@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">NoQueue Pay</string>
+    <string name="app_name">Scan Pay</string>
     <string name="app_version">1.0.0</string>
     <string name="title_cart">Cart</string>
     <string name="title_home">Home</string>
